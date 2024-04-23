@@ -1,0 +1,34 @@
+abpConfigService
+
+this.yourFormName.get('yourFormControlName').value
+
+<span *ngIf="(form.get('name').invalid && form.get('name').touched) || 
+             (form.get('name').untouched && isSubmitted)">
+    Not Valid
+</span> 
+
+
+
+import { PageAlertService } from '@abp/ng.theme.shared';
+
+@Component({
+  // ...
+})
+export class MyComponent {
+  constructor(private service: PageAlertService) {}
+
+  showWarning() {
+    this.service.show({
+      type: 'warning',
+      message:
+        'We will have a service interruption between 02:00 AM and 04:00 AM at October 23, 2023!',
+      title: 'Service Interruption',
+    });
+  }
+}
+
+// Browser Tab close event
+    window.addEventListener('beforeunload', function (e) {      
+      e.preventDefault();
+      e.returnValue = '';
+    });

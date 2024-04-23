@@ -1,0 +1,13 @@
+<form #TPinForm="ngForm" (ngSubmit)="onSubmit(TPinForm)">
+
+    <div class="input-box active-grey">
+        <label class="input-label">T-Pin Number</label>
+        <input type="text" class="input-1" onfocus="setFocus(true)" onblur="setFocus(false)" id="TPin" name="TPin"  placeholder="0"  ngModel/>
+      </div>  
+    <p>
+        <button style="margin: 5px; padding: 5px" type="button" class="btn btn-primary">Resend T-Pin
+        </button>
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </p>
+
+</form>

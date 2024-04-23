@@ -1,0 +1,120 @@
+<div class="container-fluid content_scroll">
+    <div class="row">
+        <div class="col-lg-12 col-md-12 col-sm-12 ">
+            <div class="heading_box">
+            <i class="fa-solid fa-diamond"></i>
+            <h1 class="mb-0">portfolio summary</h1>
+            </div>
+        </div>
+    </div>
+        
+
+    <div class="row">
+        <div class="col-lg-6 col-md-6 col-sm-6">
+            <div class="card card-2">
+                <div class="card-header">
+                <h6 class="mb-0">PERSONAL INFORMATION</h6>
+                </div>
+                <div class="card-body">
+
+
+                <table class="table">
+                    
+                    <tbody>
+                        <tr>
+                            <th class="pad-td" scope="row">Account Title:</th>     
+                           <td class="pad-td">{{dataP?.ACC_TITLE}}</td> 
+                        </tr>
+                        <tr>
+                            <th  class="pad-td" scope="row">Account Status:</th>                       
+                            <td >{{dataP?.ACC_STATUS}} </td>   
+                        </tr>
+                        <tr>
+                            <th class="pad-td"scope="row">Account Opening Date:</th>                       
+                           <td class="pad-td"> {{dataP?.ACC_OPENINGDATE}}  </td>  
+                        </tr>
+                        <tr>
+                            <th class="pad-td"scope="row">Email Address:</th>                       
+                            <td class="pad-td">{{dataP?.ACC_EMAILADDRESS}}  </td>  
+                        </tr>
+                        <tr>
+                            <th class="pad-td" scope="row">Cell#</th>                       
+                            <td class="pad-td">{{dataP?.ACC_SMSCELLNUMBER}}  </td>  
+                        </tr>
+                        <tr>
+                            <th class="pad-td" scope="row">Account Type:</th>   
+                           <td class="pad-td"> {{dataP?.ACC_ACCOUNTTYPE}}    </td>                    
+                        </tr>
+                        <tr>
+                            <th class="pad-td" scope="row">IS CNIC Valid: </th>  
+                           <td class="pad-td"> {{dataP?.ACC_CNICEXPIRYDATE}}  </td>                       
+                        </tr>
+                        <tr>
+                            <th class="pad-td" scope="row">Risk Level </th>     
+                            <td class="pad-td">{{dataP?.ACC_RISKLEVEL}} </td>                     
+                        </tr>
+                        <tr>
+                            <th class="pad-td" scope="row">Zakat Status</th>     
+                           <td class="pad-td"> {{dataP?.ACC_RISKLEVEL}}   </td>                   
+                        </tr>
+                        <tr>
+                            <th class="pad-td" scope="row">Bank Name </th>     
+                           <td class="pad-td"> {{dataP?.BankName}} </td>                     
+                        </tr>
+                        <tr>
+                            <th  class="pad-td" scope="row">Bank Account</th>     
+                            <td class="pad-td">{{dataP?.AccountNo}}   </td>                   
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            </div>
+        </div>
+        <div class="col-lg-6 col-md-6 col-sm-6">
+            <div class="card card-2">
+                <div class="card-header">
+                <h6 class="mb-0">HOLDING PERCENTAGE</h6>
+            </div>
+            <div class="card-body">
+            
+                <div class="chart_wrapper">
+                    <canvas id="myChart" width="50" height="50"></canvas>
+                </div>
+                </div>  
+
+            </div>
+        </div>
+
+    </div>
+    <div class="col-lg-12 col-md-12 col-sm-12 my-3">
+        <div class="card card-2">
+            <div class="card-header">
+                <h6 class="mb-0">PORTFOLIO SUMMARY</h6>
+            </div>
+            <div class="card-body">
+                <table class="table table-hover tb_custom">
+                    <thead>
+                      <tr>
+                        <th class="text-start" scope="col">Funds Name</th>
+                        <th class="text-center" scope="col">Units</th>
+                        <th class="text-center" scope="col">Last available NAV</th>
+                        <th class="text-end" scope="col">Investment Values In [PKR]</th>
+                        <th class="text-center" scope="col">Holding Percentage</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr *ngFor="let datafu of dataF">
+                        <td class="text-start">{{datafu.PRD_NAME}}</td>                      
+                        <td class="text-center">{{datafu.Units}}</td>
+                        <td  class="text-center">{{datafu.NAV}}</td>
+                        <td class="text-end" >{{datafu.NetAmount}}</td>
+                        <td class="text-center">{{datafu.HoldingPercentage}}</td>
+                      </tr>
+                     
+                    </tbody>
+                  </table>
+            </div>
+        </div>
+    </div>
+
+</div>

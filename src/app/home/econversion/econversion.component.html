@@ -1,0 +1,130 @@
+<div class="container-fluid content_scroll">
+    <div class="row">
+        <div class="col-lg-12 col-md-12 col-sm-12">
+            <div class="heading_box">
+                <i class="fa-solid fa-diamond"></i>
+            <h1 class="mb-0">E Conversion</h1>
+            </div>
+        </div>
+    </div>
+    <div class="card card-2  py-3 px-3">    
+        <div class="card-body overflow-ys">
+            <div class="col-12 size_p">
+                <ol>
+                    <li>I/We, the undersigned, hereby declare that:</li>
+                    <li>I acknowledge having read and understood the e-transact Terms and Conditions and
+                        agree to be bound by whatever written in the e-transact Terms and Conditions.</li>
+                    <li>I understand that redemption / conversion of units will be made in accordance with
+                        the terms and conditions as mentioned in the Constitutive Documents of selected
+                        funds;</li>
+                    <li>I understand that the redemption / conversion price of units will differ due to
+                        Front-end Load/Back-end Load where applicable;</li>
+                    <li>I understand that in case of mutual funds operating under forward pricing mechanism,
+                        the price of units applicable for redemption / conversion will not be known at the
+                        time of redemption / conversion;</li>
+                    <li>I understand that redemption / conversion of units transaction may be subject to
+                        capital gain tax in accordance with the requirements of Income Tax Ordinance, 2001
+                        applicable in Pakistan and the directives issued by Federal Board of Revenue (FBR)
+                        from time to time;</li>
+                    <li>I understand that once the redemption / conversion request has been received through
+                        e-transact by Faysal Asset Management Limited, it cannot be cancelled/altered.</li>
+                </ol>
+            </div>
+          
+        </div>
+        <div class="card-footer">
+            <div class="row">
+                <div class="col-lg-12  col-md-12 col-sm-12 col-xs-12 text-center p-2">
+                    <!--<button type="button" class="btn btn-primary btn-sm" (click)="openPopup()">Agree</button>
+                    <button type="button" class="btn btn-secondary btn-sm">Disagree</button>-->
+                    <button routerLink="./ecdetail" class="mt-20 w-10 btn orange btn-block col-2 mx-1" >Agree</button>
+                    <button type="button" class="mt-20 w-10 btn orange btn-block col-2 " (click)="closePopup()">Reset</button>                    
+                </div>        
+                <router-outlet></router-outlet>
+            </div>
+        </div>
+    </div>
+
+
+ 
+
+
+
+    <!--<div class="modal" tabindex="-1" role="dialog" [ngStyle]="{'display':displayStyle}">
+
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title">E-CONVERSION</h4>
+                </div>
+                <div class="modal-body">
+
+
+                    <form>
+
+                        <div class="row">
+                            <div class="clo-12">
+                                <button type="button" class="btn btn-success">Conversion Out</button>
+
+                                <button type="button" class="btn btn-light">Conversion In</button>
+
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-12">
+                                <h3>Add Conversion out request </h3>
+                            </div>
+                        </div>
+
+
+                        <div class="row">
+                            <div class="col-12">
+                                <label for="inputProduct">Product Name</label>
+                                <input class="form-control" id="disabledInput" type="text" placeholder="...">
+                            </div>
+                            <div class="col-12">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="flexRadioDefault"
+                                        id="flexRadioDefault1">
+                                    <label class="form-check-label" for="flexRadioDefault1">
+                                        Buy Units
+                                    </label>
+                                </div>
+                                <input type="text" class="form-control" placeholder="0.00000">
+                            </div>
+                            <div class="col-12">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="flexRadioDefault"
+                                        id="flexRadioDefault1">
+                                    <label class="form-check-label" for="flexRadioDefault1">
+                                        Buy Amount
+                                    </label>
+                                </div>
+                                <input type="text" class="form-control" placeholder="0.00">
+                            </div>
+
+
+
+                            <div class="col-12">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="flexRadioDefault"
+                                        id="flexRadioDefault1">
+                                    <label class="form-check-label" for="flexRadioDefault1">Entire</label>
+                                </div>
+                            </div>                
+                        </div>
+                    </form>
+
+                </div>
+
+                <div class="modal-footer">
+                    <button type="submit" class="btn btn-primary" >Submit</button>
+                    <button type="button" class="btn btn-danger" (click)="closePopup()">Reset</button>
+                </div>
+            </div>
+        </div>
+
+    </div>-->
+
+
+</div>

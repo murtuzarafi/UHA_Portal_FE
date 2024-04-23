@@ -1,0 +1,113 @@
+
+
+
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" />
+<section>
+
+     <!-- navbar -->
+    
+  <nav class="background-radial-gradient ">
+      <header>
+          <div class="imgBx">
+              <img src="../../assets/images/iconse.png" alt="logo">
+              <h3>E-Investment Portal</h3>
+          </div>
+          <div class="toggle">
+              <i class="fa-solid fa-chevron-right"></i>
+              <i class="fa-solid fa-chevron-left"></i>
+          </div>
+      </header>
+      <menu>
+          <ul>
+             
+              <li routerLinkActive="liactive">
+                  <a skipLocationChange="true" [routerLink]="['./alert']"  >
+                    <i class="fa-solid fa-bell"></i>
+                      <span>Alerts</span>
+                  </a>
+              </li>
+              <li routerLinkActive="liactive">
+                  <a  skipLocationChange="true" [routerLink]="['./portfoliosummary']"  >
+                    <i class="fa-solid fa-money-bill-transfer"></i>
+                      <span>E-Transactions</span>
+                  </a>
+              </li>
+              <li routerLinkActive="liactive">
+                  <a skipLocationChange="true" [routerLink]="['./einvestment']" >
+                    <i class="fa-solid fa-chart-line"></i>
+                      <span>E-Investment</span>
+                  </a>
+              </li>
+              <li routerLinkActive="liactive">
+                  <a skipLocationChange="true" [routerLink]="['./eredemption']" >
+                    <i class="fa-solid fa-gift"></i>
+                      <span>E-Redemption</span>
+                  </a>
+              </li>
+              <li routerLinkActive="liactive">
+                  <a skipLocationChange="true" [routerLink]="['./econversion']" >
+                    <i class="fa-solid fa-cent-sign"></i>
+                      <span>E-Conversion</span>
+                  </a>
+              </li>
+              <li routerLinkActive="liactive">
+                <a skipLocationChange="true" [routerLink]="['./transactionsummary']"  >
+                  <i class="fa-solid fa-cent-sign"></i>
+                    <span>Summary</span>
+                </a>
+            </li>
+            <li routerLinkActive="liactive">
+                <a skipLocationChange="true" [routerLink]="['./accountstatement']"  >
+                    <i class="fa-solid fa-file-lines"></i>
+                    <span>Account Statement</span>
+                </a>
+            </li>
+              <li routerLinkActive="liactive">
+                <a skipLocationChange="true" [routerLink]="['./accountmapping']" >
+                    <i class="fa-solid fa-person-circle-plus"></i>
+                    <span>E-Add Account</span>
+                </a>
+            </li>
+            <!-- <li routerLinkActive="liactive">
+              <a skipLocationChange="true" [routerLink]="['./econversion']" >
+                  <i class="fa-solid fa-gear"></i>
+                  <span>Account Statement</span>
+              </a>
+          </li> -->
+          </ul>
+          <!-- <div class="mode">
+              <div class="icon">
+                  <a href="#">
+                      <i class="fa-solid fa-right-from-bracket"></i>
+                      <span>logout</span>
+                  </a>
+              </div>
+              <div class="dayNight">
+                  <div class="switch">
+                      <div class="iconBx">
+                          <i class="fa-solid fa-moon"></i>
+                          <i class="fa-solid fa-sun"></i>
+                      </div>
+                  </div>
+                  <span class="switchText">dark mode</span>
+              </div>
+          </div> -->
+      </menu>
+  </nav>
+
+ 
+  <main  [@routeAnimations]="prepareRoute(outlet)">
+    
+        <app-logout></app-logout>
+        <router-outlet #outlet="outlet"></router-outlet>
+    
+    
+  
+  </main>
+</section>
+
+<app-footer ngClass="footer"></app-footer>
+
+<!-- <app-sidebar [UserData]="params"></app-sidebar> -->

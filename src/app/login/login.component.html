@@ -1,0 +1,134 @@
+<!-- Section: Design Block -->
+
+
+<section class="background-radial-gradient overflow-hidden circles exclude-loader">
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <div class="container px-4 py-5 px-md-5 text-center text-lg-start my-5">
+      <div class="row gx-lg-5 align-items-center mb-5" style="z-index: 9999">
+        <div class="col-lg-6 mb-5 my-5 mb-lg-0 d-none d-lg-block d-md-block d-sm-block" style="z-index: 10">
+          <h1 class="my-5 display-5 fw-bold ls-tight" style="color: hsl(218, 81%, 95%)">
+            <div class="content">
+                <h2> E-Investment 
+                    Portal</h2>
+                <h2> E-Investment 
+                    Portal</h2>
+              </div>
+           
+          </h1>
+          <h1 class="my-1 display-5 fw-bold ls-tight" style="color: hsl(218, 81%, 95%)">
+          <span style="color: hsl(218, 81%, 75%)">for your business</span>
+        </h1>
+          <p class="mb-4 opacity-70" style="color: hsl(218, 81%, 85%)">
+            An Investor Profile is a summary of an investor's financial goals, financial situation, time horizon, and risk tolerance. It can help investors, like you, select appropriate investments. In general terms, your profile defines the level of risk you are willing to take.
+          </p>
+        </div>
+  
+        <div class="col-lg-6 mb-5 mb-lg-0 position-relative">
+          <div id="radius-shape-1" class="position-absolute  shadow-5-strong"></div>
+          <div id="radius-shape-2" class="position-absolute shadow-5-strong"></div>
+  
+          <div class="card bg-glass">
+            <div class="log_box">
+                    <h1>Login</h1>
+            </div>
+            <div class="company_logo">
+              <img src="../../assets/images/Sidat-Hyder-Logo.png" class="img-fluid" />
+            </div>
+            <div class="card-body px-4 py-5 px-md-4">
+             
+              <form class="user-login" [formGroup]="loginForm" (ngSubmit)="onLogin()">
+                <!-- 2 column grid layout with text inputs for the first and last names -->
+                <div class="row">
+                  <div class="col-md-12 mb-2">
+                    <!-- Username Field -->
+                   
+
+                    <div class="form-outline">
+                            <div class="input-field">
+                              <input type="email" placeholder="UserName" id="userName"  formControlName="userName">
+                              <i class="uil uil-user icon"></i>
+                              
+                            </div>
+                            <div *ngIf="!formControl['userName'].valid && (formControl['userName'].dirty 
+                              || formControl['userName'].touched)" class="password-reminder">
+                              <p class="text-danger">Valid user name required </p>
+                            </div>
+                    </div>
+                    <!-- Username Field -->
+
+                    <!-- Password Field -->
+                    <div class="form-outline mb-2">
+                          <div class="input-field">
+                                <input type="password" class="password" id="password" placeholder="Enter your password"  formControlName="password">
+                                <i class="uil uil-lock icon"></i>
+                                <i class="uil uil-eye-slash showHidePw"></i>
+                                
+                          </div>
+                          <div *ngIf="!formControl['password'].valid && (formControl['password'].dirty 
+                          || formControl['password'].touched)" class="password-reminder">
+                          <p class="text-danger">Valid user password required </p>
+                          </div>  
+                  </div>                      
+                  <!-- Password Field -->
+               
+                <!-- captchacode -->
+                    <div class="form-outline mb-2">
+                      <div class="wrapper">
+                          <canvas id="canvas" width="300" height="50"></canvas>
+                          <button id="reload-button" (click)="getCaptcha()">
+                            <i class="fas fa-arrow-rotate-right"></i>
+                          </button>
+                          <button id="reload-button" (click)="checkit()">
+                              <i class="fa-solid fa-spell-check"></i>
+                            </button>
+                        </div>  
+                  </div>
+                <!-- captchacode -->
+                
+                <!-- captchainputfield -->
+                <div class="form-outline mb-2">
+                    <div class="input-field">
+                      <input type="text" placeholder="Enter Your Code Here" id="typeText" required formControlName="typeText">
+                      <i class="uil uil-shield-check icon"></i>
+                    </div>
+                </div>
+                <!-- captchainputfield -->
+                  </div> 
+                </div>
+  
+                <!-- Submit button -->
+              
+                <div class="row">
+                    <div class="col-6">
+                        <button class="mt-20 w-100 btn orange btn-block" type="submit">Login</button>
+                    </div>
+                    <div class="col-6">
+                        <button class="mt-20 w-100 btn orange btn-block" (click)="openAccount()">Open
+                            Account</button>
+                    </div>
+                </div>
+                
+                <!-- Register buttons -->
+               
+              </form>
+            </div>
+            <div class="text-center fw-bold">
+                <div>Powered by Sidat Hyder Solution</div>
+              </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Section: Design Block -->
+  
+    

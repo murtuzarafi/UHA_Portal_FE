@@ -1,0 +1,121 @@
+.table_overflow
+{
+  overflow-y: auto;
+  height: 250px;
+}
+.buy label,
+.buy input {
+   position: relative;
+    display: inline-block;
+    font-family: 'roboto';
+    margin: 5px 10px;
+    padding: 10px 50px;
+    overflow: hidden;
+    border-width: 0;
+    outline: none;
+    border-radius: 2px;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, .6);
+    background: var(--background-gradient);
+    color: #ecf0f1;
+    transition: background-color .3s ease-in-out;
+    cursor: pointer;
+}
+
+.buy input[type="radio"] {
+  display: none;
+}
+
+.buy label:hover {
+  background: #aecbff;
+  color: #000;
+  transition: .3s ease-in-out;
+
+}
+
+.buy input[type="radio"]:checked + label {
+  background: #aecbff;
+  color: #000;
+  transition: .3s ease-in-out;
+}
+
+#ByUnits {
+  top: 0px;
+  
+}
+
+#ByAmount {
+  top: 0px;
+ 
+}
+#entire {
+  top: 0px;
+ 
+}
+#percentage {
+  top: 0px;
+ 
+}
+
+.paymentmode label,
+.paymentmode input {
+  position: relative;
+    display: inline-block;
+    font-family: 'roboto';
+    margin: 5px 10px;
+    padding: 10px 50px;
+    overflow: hidden;
+    border-width: 0;
+    outline: none;
+    border-radius: 2px;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, .6);
+    background: var(--background-gradient);
+    color: #ecf0f1;
+    transition: background-color .3s ease-in-out;
+    cursor: pointer;
+}
+
+.paymentmode input[type="radio"] {
+  display: none;
+}
+
+.paymentmode label:hover {
+  background: #aecbff;
+  color: #000;
+  transition: .3s ease-in-out;
+
+}
+
+.paymentmode input[type="radio"]:checked + label {
+  background: #aecbff;
+  color: #000;
+  transition: .3s ease-in-out;
+}
+
+#inlineRadio1 {
+  top: 0px;
+  
+}
+
+#inlineRadio2 {
+  top: 0px;
+ 
+}
+#inlineRadio3 {
+  top: 0px;
+ 
+}
+fieldset {
+  margin: 0 0 30px 0;
+  border: 1px solid #ccc;
+  font-family: 'roboto';
+}
+
+legend {
+    background: #aecbff;
+    padding: 1px 10px;
+    color: #363a40;
+    margin: 0 auto;
+    display: block;
+    font-size: 1rem;
+    font-weight: bold;
+}

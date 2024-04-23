@@ -1,0 +1,56 @@
+
+<div class="row justify-content-between">
+    <div class="col-7">
+        <h5 >Pending Redemption/Conversion Transaction(s)</h5>
+    </div>
+    <div class="col-2">
+        <div class="row g-3 text-end">
+            <div class="col-auto mt-2">
+                <label class="control-label" for="noOfRows">No. of Rows</label>
+            </div>
+            <div class="col-auto mt-0">
+                <select name="noOfRows" (change)="onTableSizeChange($event)" class="form-select form-control-sm">
+                    <option *ngFor="let size of tableSize" [ngValue]="size" [perPage]="size">
+                        {{ size }}
+                    </option>
+                </select>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 ">
+        <div class="table_overflow">
+            <table class="table table-hover tb_custom">
+            <thead>
+                <tr class="text-center table-secondary">
+                    <th scope="col">Transaction Date 1</th>
+                    <th scope="col">Transaction Type</th>
+                    <th scope="col">Fund</th>
+                    <th scope="col">Amount</th>
+                    <th scope="col">Unit(s)</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody *ngIf="UnPaiding" >
+                <!--<tr *ngFor="let dtl of Pending; let i = index">-->
+                <tr  *ngFor="let dtl of UnPaiding | paginate : pagingConfig ;let i = index; ">                    
+                    <td>{{dtl.TransactionDate}}</td>
+                    <td>{{dtl.SourceFund}}</td>
+                    <td>{{dtl.Transactiontype}}</td>
+                    <td>{{dtl.Amount}}</td>
+                    <td>{{dtl.Units}}</td>
+                    <td>{{i +1}}</td>
+                </tr>
+            </tbody>
+        </table>
+        </div>
+        <div class="d-flex justify-content-center">
+            <pagination-controls previousLabel="Prev" nextLabel="Next" (pageChange)="onTableDataChange($event)">
+            </pagination-controls>
+            
+            
+        </div>
+    </div>
+</div>

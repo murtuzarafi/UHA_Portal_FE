@@ -1,0 +1,41 @@
+
+input.ng-invalid.ng-touched {
+    //border-left-color: 2px solid red; 
+    border-color:  red;
+  }
+  label.ng-invalid.ng-touched
+  {
+    color: red;
+  }
+  input.ng-valid { 
+    border-color:  green; 
+  }
+  .validation{
+  
+    color: red;
+
+  }
+  svg {
+    color : brown;
+}
+.mod-wid
+{
+    width: 800px;
+}
+
+.modal-dialog {
+  //width: 100%;
+  margin: auto;
+  max-width: 1000px !important; 
+}
+
+.abp-modal-dialog {
+  max-width: 2000px !important; 
+}
+canvas {
+   
+  border-radius: 0.4em;
+  border: 2px dashed #88a8db;
+  background-image: url(../../../assets/images/bg3.jpg);
+  margin-right: 10px;
+}

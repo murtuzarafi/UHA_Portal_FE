@@ -1,0 +1,150 @@
+<section class="background-radial-gradient  circles">
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <app-backtologin></app-backtologin>
+<div class="container  px-5 py-1 px-md-5 text-center  my-4">
+    <div class="card bg-glass px-5 py-5 px-md-5  my-5">
+    <form [formGroup]="form" (ngSubmit)="onSubmit()" class="needs-validation">
+    <div class="row">
+        <div class="col-12">
+            <div class="heading_form">
+            <h1 class="d-flex justify-content-center">ONLINE SERVICES REQUEST </h1>
+            <h3 class="d-flex justify-content-center">
+                (Welcome to online Servic Registration)
+            </h3>
+            <p class="d-flex justify-content-center">
+                <span>Please kindly fill out the fields as below and submit. A customer service representative will be in
+                    touch shortly.Please note mandatory fields are marked with an*</span>
+                </p>
+                
+            <p class="d-flex justify-content-center">
+                <span> If you need assistance please email us on info@aaaaaa.com or
+                    Call 021-35999821-44 Ext 123</span>
+                
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+       
+        <div class="col-6">
+            <div class="input-box  my-2">
+                <label class="input-label" ngModel>Applicant Name*</label>
+                <input type="text" class="input-1" onfocus="setFocus(true)" onblur="setFocus(false)" id="txtName" formControlName="txtName"
+                required/>
+              </div>  
+
+           
+        </div>
+        <div class="col-6">
+            <div class="input-box  my-2">
+                <label class="input-label" ngModel>Registered Email Address*</label>
+                <input type="email" class="input-1" onfocus="setFocus(true)" onblur="setFocus(false)"  id="txtRegEmail" formControlName="txtRegEmail"
+                required/>
+              </div>  
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-6">
+            <div class="input-box  my-2">
+                <label class="input-label">Select</label>
+                <select class="input-1" onfocus="setFocus(true)" onblur="setFocus(false)" id="type" formControlName="type" (change)="onChange($event)">
+                    <option value="1">Individual</option>
+                    <option value="2">Pension</option>
+               
+                </select>
+              </div>
+          
+        </div>
+        <div class="col-6">
+            <div class="input-box  my-2">
+                <label class="input-label" ngModel>Username*</label>
+                <input type="text" class="input-1" onfocus="setFocus(true)" onblur="setFocus(false)"   id="txtLoginID" formControlName="txtLoginID"
+                required/>
+              </div>  
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-6">
+            <div class="input-box  my-2">
+                <label class="input-label" ngModel>Mobile Number*</label>
+                <input type="text" class="input-1" onfocus="setFocus(true)" onblur="setFocus(false)"   id="txtRegMobileNum" formControlName="txtRegMobileNum"
+                required/>
+              </div>  
+
+         
+        </div>
+        <div class="col-6">
+            <div class="input-box  my-2">
+                <label class="input-label" ngModel>Folio Number*</label>
+                <input type="text" class="input-1" onfocus="setFocus(true)" onblur="setFocus(false)"    id="txtRegNo" formControlName="txtRegNo"
+                required/>
+              </div>  
+
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-6">
+            <div class="input-box  my-2">
+                <label class="input-label" ngModel>CNIC(XXXXXXXXXXXX)*</label>
+                <input type="email" class="input-1" onfocus="setFocus(true)" onblur="setFocus(false)"   id="txtCNIC" formControlName="txtCNIC"
+                required/>
+              </div>  
+
+          
+        </div>
+        <div class="col-6">
+            <div class="input-box  my-2 active-grey">
+                <label class="input-label" ngModel>Date</label>
+                <input type="date" class="input-1" onfocus="setFocus(true)" onblur="setFocus(false)"  id="date" 
+                type="date" 
+                class="form-control" 
+                formControlName="date" 
+                formtarget=""
+                required/>
+              </div>  
+            <!-- <div class="input-group col-md-12 roundedTextBox mb-3">
+
+                <input
+                id="date" 
+                type="date" 
+                class="form-control" 
+                formControlName="date" 
+                formtarget=""
+                />
+            
+                <input class="form-control" placeholder="yyyy-mm-dd" name="dp" [(ngModel)]="model" ngbDatepicker #d="ngbDatepicker">
+                <input type="date" class="form-control" formControlName="date" id="date"   
+                                        placeholder=" Date" required>-->
+                                                                          
+                <!--<div class="input-group-append">
+                    <button class="btn btn-outline-secondary calendar" (click)="d.toggle()" type="button"></button>
+                </div>-->
+            <!-- </div> -->
+
+
+        </div>
+
+    </div>
+    <div class="row" style="margin-top: 24px;">
+        <div class="col-4"></div>
+        <div class="col-4">
+            <button  class="mt-20 w-100 btn  orange" type="submit">Online Service Requerst</button>
+        </div>
+        <div class="col-4"></div>
+    </div>
+</form>
+</div>
+</div>
+</section>

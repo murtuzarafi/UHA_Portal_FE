@@ -1,0 +1,124 @@
+<div class="container-fluid content_scroll">
+    <div class="row">
+        <div class="col-lg-12 col-md-12 col-sm-12">
+            <div class="heading_box">
+                <i class="fa-solid fa-diamond"></i>
+            <h1 class="mb-0">Alerts</h1>
+            </div>
+        </div>
+    </div>
+    <div class="card card-2 overflow-y py-3 px-3">    
+        <div class="card-body">
+        <div class="col-12">
+            <form [formGroup]="form" (ngSubmit)="onSubmit()">
+
+                <!--<label class="switch">
+                    <input type="checkbox" class="form-control" formControlName="items">
+                    <span class="slider round">
+                      <span class="on">
+                      {{form.value.UAM_SMS}}
+                      </span>
+                      <span class="off">
+                      {{form.value.UAM_SMS}}
+                      </span>
+                    </span>
+                    </label>-->
+
+                <div class="table_overflow">
+                <table class="table tb_custom">
+                    <thead>
+                        <tr >
+                            <th scope="col">Alerts</th>
+                            <th class="text-center"> 
+                                <label class="pure-material-checkbox" id="sms">
+                                    SMS
+                                    <input type="checkbox" class="form-check-input" id="sms" name="sms"  (click)="allChecked($event, 0)" />
+                                </label>
+                            </th>
+                            <th class="text-center">
+                                <label class="pure-material-checkbox" id="email">
+                                    Email
+                                    <input type="checkbox" id="email" class="form-check-input" name="email" (click)="allChecked($event, 1)"/>
+                                </label> 
+                            </th>
+                            <th class="text-center">
+                                <label class="pure-material-checkbox" id="cell">
+                                    Cell
+                                    <input type="checkbox" id="cell"  class="form-check-input"   name="cell" (click)="allChecked($event, 2)"/>
+                                </label>
+                            </th>
+                            <th class="text-center">
+                                <label class="pure-material-checkbox" id="fax">
+                                    Fax
+                                    <input type="checkbox" class="form-check-input" id="fax" name="fax" (click)="allChecked($event, 3)"/>
+                                </label>
+                              
+                            </th>
+                            <th class="text-center">
+                                <label class="pure-material-checkbox" id="courier">
+                                    Courier
+                                    <input type="checkbox" class="form-check-input" id="Courier" name="Courier" (click)="allChecked($event, 4)"/>
+                                </label>
+                                
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let row of data; let i = index" >
+                            <td>{{row.UAM_NAME}}</td>
+                            <td class="text-center">
+                                <label class="pure-material-checkbox" >
+                                    <input type="checkbox" class="form-check-input" *ngIf="row.UAM_SMSVisible==1" [checked]="row.UAM_SMS"  value="{{row.UAM_SMS}}" (change)="changeSMSStatus(row.UAM_CODE, $event)" />
+                                </label>
+                               
+                            </td>
+                            <td class="text-center">
+                                <label class="pure-material-checkbox" >
+                                    <input type="checkbox" class="form-check-input"  *ngIf="row.UAM_EMAILVisible==1" [checked]="row.UAM_EMAIL" value="{{row.UAM_EMAIL}}" (change)="changeEmailStatus(row.UAM_CODE, $event)" >
+                                </label>
+                               
+                            </td>
+                            <td class="text-center">
+                                <label class="pure-material-checkbox" >
+                                    <input type="checkbox" class="form-check-input" *ngIf="row.UAM_CALLVisible==1" [checked]="row.UAM_CALL" value="{{row.UAM_CALL}}" (change)="changeCallStatus(row.UAM_CODE, $event)" >
+                                </label>
+                               
+                            </td>
+                            <td class="text-center">
+                                <label class="pure-material-checkbox" >
+                                    <input type="checkbox" class="form-check-input" *ngIf="row.UAM_FAXVisible==1" [checked]="row.UAM_FAX" value="{{row.UAM_FAX}}" (change)="changeFaxStatus(row.UAM_CODE, $event)" >
+                                </label>
+                               
+                            </td>
+                            <td class="text-center">
+                                <label class="pure-material-checkbox" >
+                                    <input type="checkbox" class="form-check-input" *ngIf="row.UAM_COURIERVisible==1" [checked]="row.UAM_COURIER" value="{{row.UAM_COURIER}}"  (change)="changeCourierStatus(row.UAM_CODE, $event)" >
+                                </label>
+                              
+                            </td>
+                            <!--<td><input type="checkbox" formControlName="UAM_SMS" ></td>
+                            <td><input type="checkbox" formControlName="UAM_EMAIL" ></td>
+                            <td><input type="checkbox" formControlName="UAM_CALL" ></td>
+                            <td><input type="checkbox" formControlName="UAM_FAX" ></td>
+                            <td><input type="checkbox" formControlName="UAM_COURIER"></td>-->
+                        </tr>
+
+                    </tbody>
+                </table>
+                </div>
+            </form>
+           <!-- {{ form.value | json }}-->
+        </div>
+    </div>
+</div>
+</div>
+
+
+
+
+
+
+
+
+
+

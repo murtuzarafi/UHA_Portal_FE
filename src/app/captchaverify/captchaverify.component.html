@@ -1,0 +1,24 @@
+<table style="border: 2px solid black;">
+    <tr>
+        <td>Captcha</td>
+        <td>
+            <canvas id="canvas" width="230" height="60" style="border: 2px solid gray;"></canvas>
+        </td>
+        <td>
+            <button type="button" (click)="getCaptcha()">Refresh</button>
+        </td>
+    </tr>
+    <tr>
+        <td>Enter Type</td>        
+        <td> 
+            <!--<input type="text" #typeText size="25" id="typeText2">-->
+            <input type="text" id="typeText" ngModel typeText="ngModel">
+        </td>
+        
+        <td><button  type="button" (click)="checkit()"> Check It</button></td>
+    </tr>
+  
+</table>
+
+
+

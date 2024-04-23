@@ -1,0 +1,68 @@
+p {
+    font-family: Lato;
+  }
+  button {
+    padding: 10px;
+    background-color: black;
+    border: none;
+    color: white;
+    margin-top: 10px;
+  }
+  input {
+    padding: 5px;
+    font-size: 15px;
+  }
+  .w-20
+  {
+    width: 20%;
+  }
+  .dateborder
+  {
+    border: 1px solid #dddddd;
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+  .container_progressbar {
+    margin: 10px auto;
+    width: 500px;
+    text-align: center;
+  }
+  .progress {
+    padding: 0px;
+    background: rgba(0, 0, 0, 0.25);
+    border-radius: 6px;
+    box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.25), 0 1px rgba(255, 255, 255, 0.08);
+  }
+  
+  .progress-bar {	
+    height: 18px;
+    background-color: #ee303c;  
+    border-radius: 4px; 
+    transition: 0.4s linear;  
+    transition-property: width, background-color;    
+  }
+  
+  .progress-striped .progress-bar { 	
+    background-color:#354f7e; 
+    width: 100%; 
+    background-image: linear-gradient(
+          45deg, #354f7e, 
+          transparent 25%, transparent 50%, 
+          hsl(218, 81%, 50%), hsl(218, 81%, 75%),
+          transparent 75%, transparent); 
+    animation: progressAnimationStrike 6s;
+  }
+  
+  @keyframes progressAnimationStrike {
+       from { width: 0 }
+       to   { width: 100% }
+  }
+.close
+{
+  background: transparent;
+}
+.overflow-ys {
+  overflow-y: auto;
+  overflow-wrap: normal;
+  height: calc(100vh - 250px) !important;
+}

@@ -1,0 +1,33 @@
+
+
+<nav class="navbar navbar-expand-lg  p-0 bckshadow">
+
+    <ul class="navbar-nav ms-auto mb-0 mb-lg-0 profile-menu"> 
+       <li class="nav-item c_lg">
+        <img src="../../assets/images/Sidat-Hyder-Logo.png"/>
+       </li>
+        <li class="nav-item">
+            <p class="user_p">User: {{loginedUser | async}}  <br>
+                Status: {{userStatus | async }}</p>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="javascript:;" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            
+            <div class="profile-pic">
+                <img src="../../assets/images/user.png" alt="Profile Picture">
+             </div>
+         <!-- You can also use icon as follows: -->
+           <!--  <i class="fas fa-user"></i> -->
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <!-- <li><a class="dropdown-item" href="#"><i class="fas fa-sliders-h fa-fw"></i> Account</a></li>
+            <li><a class="dropdown-item" href="#"><i class="fas fa-cog fa-fw"></i> Settings</a></li> -->
+            <!-- <li><hr class="dropdown-divider"></li> -->
+            <li class="text-center"><button (click)="changeMe()"
+                [ngClass]="action =='Sign in' ? 'mt-20 w-10 btn orange btn-block ': 'mt-20 w-10 btn orange btn-block'"><i class="fas fa-sign-out-alt fa-fw"></i>
+                {{action}}</button> </li>
+          </ul>
+        </li>
+     </ul>
+    
+  </nav>

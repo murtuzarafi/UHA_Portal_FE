@@ -1,0 +1,61 @@
+.btn-primary {
+  background-color: blue;
+    
+  }
+  .btn-danger {
+    background-color: red;
+  }
+  /* Profile Picture */
+.profile-pic{
+  display: inline-block;
+  vertical-align: middle;
+   width: 50px;
+   height: 50px;
+   overflow: hidden;
+  border-radius: 50%;
+}
+
+.profile-pic img{
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+.profile-menu .dropdown-menu {
+ right: 0;
+ left: unset;
+}
+.profile-menu .fa-fw {
+ margin-right: 10px;
+}
+
+.toggle-change::after {
+ border-top: 0;
+ border-bottom: 0.3em solid;
+}
+
+.bckshadow{
+  color: white;
+  background-image: var(--background-gradient);
+  // box-shadow: 0 2px 150px rgba(0, 0, 0, .2);
+  box-shadow: 0 0px 1px rgb(0 0 0 / 15%), 0 5px 7px rgb(0 0 0 / 15%);
+}
+.user_p
+  {
+    margin-bottom: 0;
+    line-height: 1.2;
+    text-transform: capitalize;
+    font-family: "Roboto";
+    letter-spacing: 1px;
+    font-weight: 500;
+    font-size: 13px;
+    margin-top: 16px;
+    color: white;
+  }
+.c_lg
+{
+    padding: 13px 19px;
+}
+.c_lg img
+{
+    height: 40px;
+}

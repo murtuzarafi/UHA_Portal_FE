@@ -1,0 +1,219 @@
+<div class="container-fluid content_scroll">
+    <div class="row">
+        <div class="col-lg-12 col-md-12 col-sm-12">
+            <div class="heading_box">
+                <i class="fa-solid fa-diamond"></i>
+            <h1 class="mb-0">E-REDEMPTION Detail</h1>
+            </div>
+        </div>
+    </div>
+    <div class="card card-2  py-3 px-3">    
+        <div class="card-body overflow-y">
+            <div class="row">
+                <div class="col-12">
+                <div class="table_overflow">
+                    <table class="table table-hover tb_custom">
+                        <thead>
+                            <tr>
+                                <th  scope="col"></th>
+                                <th class="text-start" scope="col">Product Name</th>
+                                <th class="text-center" scope="col">Bal. Units</th>
+                                <th lass="text-center" scope="col">Req. Units</th>
+                                <th class="text-center" scope="col">Redeemable Units</th>
+                                <th scope="col">Redeemable Amount</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr *ngFor="let dtl of dataDtl; let i = index" >
+                                <td class="text-center">
+                                    <label class="pure-material-checkbox">
+                                    <input class="form-check-input"  type="checkbox" value="{{dtl.FND_FUNDCODE}}" [checked]="dtl.selected"
+                                        (change)="isAllSelected(dtl)"/></label></td>
+                                <td class="text-start">{{dtl.PRD_NAME}}</td>
+                                <td class="text-center">{{dtl.BALANACEUNITS}}</td>
+                                <td class="text-center">{{dtl.PUT_MININVESTMENTAMOUNT}}</td>
+                                <td class="text-center">{{dtl.BALANACEUNITS}}</td>
+                                
+                                <td class="text-center">{{dtl.BALANACEUNITS * dtl.NAVVALUE | number : '1.2-2'}}</td>
+            
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>    
+                </div>
+            </div>
+            
+            
+            <form>
+                <div class="row">
+                    <div class="col-lg-12 col-md-12 col-sm-12">
+                        <div class="input-box active-grey">
+                            <label class="input-label" for="inputProduct">Product Name</label>
+                            <input type="text" class="input-1" onfocus="setFocus(true)" onblur="setFocus(false)" id="disabledInput"  name="ProductName"  value="{{productName}}"/>
+                          </div> 
+                      
+                    </div>
+                    <div class="col-lg-12 col-md-12 col-sm-12">
+                        <div class="buy">
+                            <input id="buyunits" type="radio" name="flexRadioDefault" (change)="buy_units('show'); onChanged($event)" [checked]="buyunits" checked>
+                        <label id="buyunits" for="buyunits">Buy Units</label>
+                        <!-- buyamount -->
+                        <input id="buyamount" type="radio" name="flexRadioDefault"  (change)="buy_amount('show'); onChanged($event)" [checked]="buyamount">
+                        <label id="buyamount" for="buyamount">Buy Amount</label>
+                        <!-- entire -->
+                        <input  type="radio" name="flexRadioDefault" id="entire" (change)="entire_menu('hide'); onChanged($event)" [checked]="entire">
+                        <label id="entire" for="entire">Entire</label>
+                    </div>
+
+
+                    </div>
+                    <div class="col-lg-12 col-md-12 col-sm-12 buy_unit_field"   *ngIf="buyunits">
+                        <div class="input-box active-grey">
+                            <label class="input-label" for="inputProduct">Units</label>
+                            <input type="text" class="input-1" onfocus="setFocus(true)" onblur="setFocus(false)" placeholder="0.00000"/>
+                          </div>  
+                    </div>
+                    <div class="col-lg-12 col-md-12 col-sm-12 buy_amount_field"  *ngIf="buyamount">
+                         <div class="input-box active-grey">
+                            <label class="input-label" for="inputProduct">Amount</label>
+                            <input type="text" class="input-1" onfocus="setFocus(true)" onblur="setFocus(false)" placeholder="0.00000"/>
+                          </div>
+                    </div>
+                    <div *ngIf="entire">
+                     
+                    </div>
+                    <div class="col-lg-12 col-md-12 col-sm-12">
+                    <fieldset>
+                        <legend>
+                            Payment Type
+                        </legend>
+                        <div class="col-lg-12 col-md-12 col-sm-12 my-3 py-3 px-3">
+                            <div class="paymentmode">
+                                <input  type="radio"  name="chkPaymType" value="Cheque" id="rbtnCheque"  checked
+                                 (change)="onChangedPayMType($event)">
+                                <label id="rbtnCheque"  for="rbtnCheque">Cheque</label>
+                              
+                              
+                                <input  type="radio"   name="chkPaymType" value="DemandDraft"  id="rbtnDemandDraft" 
+                                (change)="onChangedPayMType($event)">
+                                <label id="rbtnDemandDraft" for="rbtnDemandDraft">Demand Draft</label>
+                             
+                              
+                                <input  type="radio"  name="chkPaymType" value="BankTransfer" id="rbtnBankTransfer" 
+                                 (change)="onChangedPayMType($event)">
+                                <label id="rbtnBankTransfer" for="rbtnBankTransfer">Bank Transfer (Default)</label>
+                            </div>  
+                        </div>
+                    </fieldset>
+                    </div>
+                   
+                
+                </div>
+            </form>
+        </div>
+        <div class="card-footer">
+            <div class="row">
+                <div class="col-lg-12 col-md-12 col-sm-12 text-center p-2">
+                            <button type="button" class="mt-20 w-10 btn orange btn-block col-2 offset-lg-4 mx-1">Close</button>
+                            <button type="button" class="mt-20 w-10 btn orange btn-block col-2" (click)="OpenPopup2()">Process
+                            </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>            
+
+<div class="modal" tabindex="-1" role="dialog" [ngStyle]="{'display':displayStyle}">
+    <div class="modal-dialog modal-dialog modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content modal-2">
+            <div class="modal-header">
+                <h4 class="modal-title">System Generated T-PIN </h4>
+            </div>
+            <div class="modal-body">
+              
+
+                <form #TPinForm="ngForm" (ngSubmit)="onSubmit(TPinForm)">
+                    <div class="input-box active-grey my-3">
+                        <label class="input-label">T-Pin Number</label>
+                        <input type="number" class="input-1" onfocus="setFocus(true)" onblur="setFocus(false)" placeholder="0" id="TPin" name="TPin" ngModel/>
+                      </div> 
+                   
+               
+                    <div class="modal-footer">
+                        <button type="button" class="mt-20 w-10 btn orange btn-block mx-1"
+                            (click)="sendPin()">Resend T-Pin</button>
+                        <button type="button" (click)="onSubmit(TPinForm); showOpenPopup()"  class="mt-20 w-10 btn orange btn-block col-2 mx-1 ">Submit</button>
+                        <button type="button" class="mt-20 w-10 btn orange btn-block col-2  mx-1 "
+                            (click)="closePopup()">
+                            Close
+                        </button>
+                    </div>
+                </form>
+
+            </div>
+        
+        </div>
+    </div>
+</div>
+<!--End here-->
+
+<!--Show Process dialog-->
+
+<div class="modal" tabindex="-1" role="dialog" [ngStyle]="{'display':displayStyle2}">
+    <div class="modal-dialog modal-dialog modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content modal-2">
+            <div class="modal-header">
+                <h4 class="modal-title">E-REDEMPTION</h4>
+
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-lg-12 col-md-12 col-sm-12">
+                        <div class="process">
+                        <table class="table ">
+                            <tbody>
+                                <tr>
+                                    <td scope="row">Folio Number:</td>
+                                    <td>6487</td>
+                                </tr>
+                                <tr>
+                                    <td scope="row">Request Date:</td>
+                                    <td> {{dateNow}}</td>
+                                </tr>
+                                <tr>
+                                    <td scope="row">Transaction Type:</td>
+                                    <td>e-Investment</td>
+                                </tr>
+                                <tr>
+                                    <td scope="row">Fund:</td>
+                                    <td>{{productName}}</td>
+                                </tr>
+                                <tr>
+                                    <td scope="row">Investment Amount:</td>
+                                    <td>{{productAmount}}</td>
+                                </tr>
+                                <tr>
+                                    <td scope="row">e-Transaction Charges:</td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td scope="row">Total Amnount: </td>
+                                    <td></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="mt-20 w-10 btn orange btn-block col-3 mx-1 " (click)="SendRequest()"> Prcess</button>
+                <button type="button" class="mt-20 w-10 btn orange btn-block col-3 mx-1 " (click)="showClosePopup()"> Close </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- End process dialog-->

@@ -1,0 +1,124 @@
+$color: #80868b;
+$active-color: #344f7de3;
+$error-color: #f44336;
+$input-value-color: #202124;
+$border-color: 1px solid #dadce0;
+$border-color-active: 2px solid $active-color;
+$default-background: #fff;
+$btn-primary-bg-color: #344f7de3;
+$btn-primary-bgh-color: #344f7de3;
+$btn-primary-boxshadow-color: 0 1px 1px 0 rgba(66, 133, 244, 0.45),
+0 1px 3px 1px rgba(66, 133, 244, 0.3);
+$btn-primary-text-color: #fff;
+input {
+  background: $default-background;
+}
+
+.input-box.active-grey {
+  .input-1 {
+    border: $border-color;
+  }
+  .input-label {
+    color: $color;
+    top: -8px;
+    background: $default-background;
+    font-size: 11px;
+
+    transition: 250ms;
+
+    svg {
+      position: relative;
+      width: 11px;
+      height: 11px;
+      top: 2px;
+      transition: 250ms;
+    }
+  }
+}
+.input-box {
+  position: relative;
+  margin: 14px 0;
+  .input-label {
+    position: absolute;
+    color: $color;
+    font-size: 16px;
+    font-weight: 400;
+    max-width: calc(100% - (2 * 8px));
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    left: 8px;
+    top: 13px;
+    padding: 0 8px;
+    transition: 250ms;
+    user-select: none;
+    pointer-events: none;
+    svg {
+      position: relative;
+      width: 15px;
+      height: 15px;
+      top: 2px;
+      transition: 250ms;
+    }
+  }
+  .input-1 {
+    box-sizing: border-box;
+    height: 50px;
+    width: 100%;
+    border-radius: 4px;
+    color: $input-value-color;
+    border: $border-color;
+    padding: 13px 15px;
+
+    transition: 250ms;
+    &:focus {
+      outline: none;
+      border: 2px solid #344f7de3;
+      transition: 250ms;
+    }
+  }
+}
+.input-box.error {
+  .input-label {
+    color: $error-color;
+    top: -8px;
+    background: $default-background;
+    font-size: 11px;
+    transition: 250ms;
+  }
+  .input-1 {
+    border: 2px solid $error-color;
+  }
+}
+.input-box.focus,
+.input-box.active {
+  .input-label {
+    color: $active-color;
+    top: -8px;
+    background: $default-background;
+    font-size: 14px;
+
+    transition: 250ms;
+
+    svg {
+      position: relative;
+      width: 11px;
+      height: 11px;
+      top: 2px;
+      transition: 250ms;
+    }
+  }
+}
+.input-box.active {
+  .input-1 {
+    border: 2px solid #344f7de3;
+  }
+}
+
+
+.pull-right {
+  float: right;
+}
+.clear {
+  clear: both;
+}
