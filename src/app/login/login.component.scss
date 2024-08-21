@@ -525,3 +525,18 @@ section
   text-align: center;
 }
 //input
+
+.language-selector {
+  font-family: "roboto";
+  text-transform: uppercase;
+  background: transparent;
+  border: 1px solid #8db6ff;
+  color: #fff;
+  outline: none;
+  padding: 5px;
+  margin: 16px 4px;
+}
+.language-selector option {
+  background: #ffffff;
+  color: #1a1a1a;
+}

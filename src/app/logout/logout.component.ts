@@ -2,13 +2,16 @@ import { Component, OnInit } from '@angular/core';
 import {DataService} from '../home/data.service';
 import { Router } from "@angular/router";
 import { Observable } from 'rxjs';
+import { TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-logout',
   templateUrl: './logout.component.html',
   styleUrls: ['./logout.component.scss']
 })
+
 export class LogoutComponent implements OnInit  {
+  
 
    loginedUser : Observable<string> | undefined;
    userStatus : Observable<string> | undefined;
@@ -18,7 +21,8 @@ export class LogoutComponent implements OnInit  {
   action: string = 'Logout';
   constructor(  
                 private dataservice: DataService,
-                private router: Router
+                private router: Router,
+                public translate: TranslateService
               ){}
 
               
@@ -58,5 +62,6 @@ export class LogoutComponent implements OnInit  {
     }
   })
 });
+
   }
 }

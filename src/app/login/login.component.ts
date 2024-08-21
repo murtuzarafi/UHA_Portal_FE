@@ -6,6 +6,7 @@ import { Userservice } from '../services/userservice.service'
 import { DataService } from '../home/data.service'
 import { NotificationService } from '../notification.service'
 import { NgxUiLoaderService } from 'ngx-ui-loader';
+import { TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-login',
@@ -35,7 +36,8 @@ export class LoginComponent implements OnInit {
     private dataService: DataService,
     private notify: NotificationService,
     private NgxUiLoaderService: NgxUiLoaderService,
-    private ngxService: NgxUiLoaderService
+    private ngxService: NgxUiLoaderService,
+    public translate: TranslateService
   ) { }
 
   ngOnInit(): void {

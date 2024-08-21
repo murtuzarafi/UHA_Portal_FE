@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router, RouterOutlet } from '@angular/router';
 import {DataService} from './data.service'
 import { slideInAnimation } from '../animation';
+import { TranslateService } from '@ngx-translate/core';
 
 
 
@@ -33,6 +34,7 @@ export class HomeComponent implements OnInit {
   constructor(private route: ActivatedRoute,
     private router: Router,
     private dataService: DataService,
+    public translate: TranslateService
 
   ) { }
 

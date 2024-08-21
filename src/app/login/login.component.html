@@ -1,6 +1,9 @@
 <!-- Section: Design Block -->
-
-
+<div class="text-end">
+<select #langSelect (change)="translate.use(langSelect.value)" class="language-selector">
+  <option *ngFor="let lang of translate.getLangs()" [value]="lang" [selected]="lang === translate.currentLang">{{ lang }}</option>
+</select>
+</div>
 <section class="background-radial-gradient overflow-hidden circles exclude-loader">
     <li></li>
     <li></li>
@@ -17,18 +20,16 @@
         <div class="col-lg-6 mb-5 my-5 mb-lg-0 d-none d-lg-block d-md-block d-sm-block" style="z-index: 10">
           <h1 class="my-5 display-5 fw-bold ls-tight" style="color: hsl(218, 81%, 95%)">
             <div class="content">
-                <h2> E-Investment 
-                    Portal</h2>
-                <h2> E-Investment 
-                    Portal</h2>
+                <h2>{{'LOGIN.H2' | translate}}</h2>
+                <h2>{{'LOGIN.H2' | translate}} </h2>
               </div>
            
           </h1>
           <h1 class="my-1 display-5 fw-bold ls-tight" style="color: hsl(218, 81%, 95%)">
-          <span style="color: hsl(218, 81%, 75%)">for your business</span>
+          <span style="color: hsl(218, 81%, 75%)">{{'LOGIN.H1.SPAN' | translate}}</span>
         </h1>
           <p class="mb-4 opacity-70" style="color: hsl(218, 81%, 85%)">
-            An Investor Profile is a summary of an investor's financial goals, financial situation, time horizon, and risk tolerance. It can help investors, like you, select appropriate investments. In general terms, your profile defines the level of risk you are willing to take.
+            {{'LOGIN.P' | translate}}
           </p>
         </div>
   
@@ -38,7 +39,7 @@
   
           <div class="card bg-glass">
             <div class="log_box">
-                    <h1>Login</h1>
+                    <h1>{{'LOGIN.LOGBOX.H1' | translate }}</h1>
             </div>
             <div class="company_logo">
               <img src="../../assets/images/Sidat-Hyder-Logo.png" class="img-fluid" />
@@ -54,13 +55,13 @@
 
                     <div class="form-outline">
                             <div class="input-field">
-                              <input type="email" placeholder="UserName" id="userName"  formControlName="userName">
+                              <input type="email" placeholder="{{'LOGIN.USER.TEXT' | translate}}" id="userName"  formControlName="userName">
                               <i class="uil uil-user icon"></i>
                               
                             </div>
                             <div *ngIf="!formControl['userName'].valid && (formControl['userName'].dirty 
                               || formControl['userName'].touched)" class="password-reminder">
-                              <p class="text-danger">Valid user name required </p>
+                              <p class="text-danger">{{ 'LOGIN.ERROR.P' | translate}} </p>
                             </div>
                     </div>
                     <!-- Username Field -->

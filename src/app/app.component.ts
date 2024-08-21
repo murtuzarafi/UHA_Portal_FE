@@ -4,7 +4,7 @@ import { FormBuilder, FormGroup, Validators } from "@angular/forms";
 import { Router, ActivatedRoute, RouterOutlet } from '@angular/router';
 import { BnNgIdleService } from 'bn-ng-idle'; // import it to your component
 import { NgxUiLoaderService } from "ngx-ui-loader";
-
+import { TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-root',
@@ -24,8 +24,24 @@ export class AppComponent implements OnInit, OnDestroy {
     private bnIdle: BnNgIdleService,
     private NgxUiLoaderService: NgxUiLoaderService,
     private _loader: NgxUiLoaderService,
+    public translate: TranslateService
    
-  ) { }
+  ) {
+    translate.addLangs(['en', 'ar']);
+    translate.setDefaultLang('en');
+    const browserLang = translate.getBrowserLang();
+    if (browserLang) {
+      try {
+        translate.use(browserLang.match(/en|ar/) ? browserLang : 'en');
+      } catch (error) {
+        console.log(error);
+      }
+    } else {
+      console.warn("Browser language is undefined. Fallback to default language.");
+      translate.use('en');
+    }
+
+   }
   onSubmit(user: any) {
     /// this.router.navigate(['/home']);
     //this.toastr.show("User logged in successfully");

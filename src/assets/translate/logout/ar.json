@@ -1,0 +1,11 @@
+{
+    "LOGOUT": {
+      "TITLE": "Hallo Angular mit ngx-translate !",
+      "SELECT": "Sprache ändern"
+    },
+    "HELP": {
+      "TITLE": "Hilfe",
+      "TEXT": "Dieser Text kommt aus einer geteilten Übersetzungsdatei!"
+    }
+  }
+  

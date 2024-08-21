@@ -1,0 +1,19 @@
+{
+    "LOGIN": {
+     "H2": "E-Investment Portal",
+      "H1": {
+        "SPAN": "for your business"
+      } ,
+     "P" : "An Investor Profile is a summary of an investor's financial goals, financial situation, time horizon, and risk tolerance. It can help investors, like you, select appropriate investments. In general terms, your profile defines the level of risk you are willing to take.",
+     "LOGBOX" :{
+        "H1": "Login"
+     },
+     "USER":{
+        "TEXT": "Username "
+     },
+    "ERROR":
+    {
+        "P": "Valid user name required"
+    }
+    }
+}

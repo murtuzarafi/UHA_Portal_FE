@@ -1,0 +1,18 @@
+{
+    "HOME": {
+     "H3": "E-Investment Portal",
+     "MENU": {
+        "ITEM1": "Alerts",
+        "ITEM2": "E-Transactions",
+        "ITEM3": "E-Investment",
+        "ITEM4": "E-Redemption",
+        "ITEM5": "E-Conversion",
+        "ITEM6": "Summary",
+        "ITEM7": "Account Statement",
+        "ITEM8": "E-Add Account"
+       
+     }
+  
+ }
+
+}

@@ -2,7 +2,13 @@
 
 <nav class="navbar navbar-expand-lg  p-0 bckshadow">
 
-    <ul class="navbar-nav ms-auto mb-0 mb-lg-0 profile-menu"> 
+    <ul class="navbar-nav ms-auto mb-0 mb-lg-0 profile-menu">
+    
+      <li class="nav-item"> 
+        <select #langSelect (change)="translate.use(langSelect.value)" class="language-selector">
+          <option *ngFor="let lang of translate.getLangs()" [value]="lang" [selected]="lang === translate.currentLang">{{ lang }}</option>
+        </select>
+      </li>
        <li class="nav-item c_lg">
         <img src="../../assets/images/Sidat-Hyder-Logo.png"/>
        </li>

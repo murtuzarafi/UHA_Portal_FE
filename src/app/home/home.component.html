@@ -1,8 +1,4 @@
 
-
-
-
-
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" />
 <section>
 
@@ -12,7 +8,7 @@
       <header>
           <div class="imgBx">
               <img src="../../assets/images/iconse.png" alt="logo">
-              <h3>E-Investment Portal</h3>
+              <h3>{{'HOME.H3' | translate}}</h3>
           </div>
           <div class="toggle">
               <i class="fa-solid fa-chevron-right"></i>
@@ -25,49 +21,43 @@
               <li routerLinkActive="liactive">
                   <a skipLocationChange="true" [routerLink]="['./alert']"  >
                     <i class="fa-solid fa-bell"></i>
-                      <span>Alerts</span>
+                      <span>{{'HOME.MENU.ITEM1' | translate}}</span>
                   </a>
               </li>
               <li routerLinkActive="liactive">
                   <a  skipLocationChange="true" [routerLink]="['./portfoliosummary']"  >
                     <i class="fa-solid fa-money-bill-transfer"></i>
-                      <span>E-Transactions</span>
+                      <span>{{'HOME.MENU.ITEM2' | translate}}</span>
                   </a>
               </li>
               <li routerLinkActive="liactive">
                   <a skipLocationChange="true" [routerLink]="['./einvestment']" >
                     <i class="fa-solid fa-chart-line"></i>
-                      <span>E-Investment</span>
+                      <span>{{'HOME.MENU.ITEM3' | translate}}</span>
                   </a>
               </li>
               <li routerLinkActive="liactive">
                   <a skipLocationChange="true" [routerLink]="['./eredemption']" >
                     <i class="fa-solid fa-gift"></i>
-                      <span>E-Redemption</span>
+                      <span>{{'HOME.MENU.ITEM4' | translate}}</span>
                   </a>
               </li>
               <li routerLinkActive="liactive">
                   <a skipLocationChange="true" [routerLink]="['./econversion']" >
                     <i class="fa-solid fa-cent-sign"></i>
-                      <span>E-Conversion</span>
-                  </a>
-              </li>
-              <li routerLinkActive="liactive">
-                <a skipLocationChange="true" [routerLink]="['./transactionsummary']"  >
-                  <i class="fa-solid fa-cent-sign"></i>
-                    <span>Summary</span>
+                    <span>{{'HOME.MENU.ITEM5' | translate}}</span>
                 </a>
             </li>
             <li routerLinkActive="liactive">
                 <a skipLocationChange="true" [routerLink]="['./accountstatement']"  >
                     <i class="fa-solid fa-file-lines"></i>
-                    <span>Account Statement</span>
+                    <span>{{'HOME.MENU.ITEM6' | translate}}</span>
                 </a>
             </li>
               <li routerLinkActive="liactive">
                 <a skipLocationChange="true" [routerLink]="['./accountmapping']" >
                     <i class="fa-solid fa-person-circle-plus"></i>
-                    <span>E-Add Account</span>
+                    <span>{{'HOME.MENU.ITEM7' | translate}}</span>
                 </a>
             </li>
             <!-- <li routerLinkActive="liactive">

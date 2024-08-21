@@ -12,7 +12,10 @@ import { LoginComponent } from './login/login.component';
 import { HomeComponent } from './home/home.component';
 import {AuthGuard} from './auth/auth.guard'
 import {AuthService} from './auth/auth.service'
-import { HttpClientModule } from '@angular/common/http';
+import {HttpClientModule, HttpBackend, HttpClient } from '@angular/common/http';
+import {TranslateModule, TranslateLoader} from '@ngx-translate/core';
+import { TranslateHttpLoader } from '@ngx-translate/http-loader';
+import { MultiTranslateHttpLoader } from 'ngx-translate-multi-http-loader';
 import { CaptchaverifyComponent } from './captchaverify/captchaverify.component';
 //import { PortfoliosummaryComponent } from './portfoliosummary/portfoliosummary.component'
 import {AccountopeningComponent} from './accountopening/accountopening.component';
@@ -47,6 +50,15 @@ import { EcdetailComponent } from './home/econversion/ecdetail/ecdetail.componen
 import { BacktologinComponent } from './backtologin/backtologin.component';
 // import { NewSidebrComponent } from './home/new-sidebr/new-sidebr.component';
 import { NgxUiLoaderModule, NgxUiLoaderHttpModule,NgxUiLoaderRouterModule,NgxUiLoaderConfig } from 'ngx-ui-loader';
+
+export function HttpLoaderFactory(HttpBackend: HttpBackend) {
+  return new MultiTranslateHttpLoader(HttpBackend, [
+    './assets/translate/logout/',
+    './assets/translate/login/',
+    './assets/translate/home/',
+  './assets/translate/home/portfoliosummary/',
+  './assets/translate/home/einvestment/']);
+}
 
 const ngxUiLoaderConfig: NgxUiLoaderConfig = {
   "bgsColor": "#b4cfff",
@@ -139,7 +151,13 @@ const ngxUiLoaderConfig: NgxUiLoaderConfig = {
     NgxUiLoaderModule.forRoot(ngxUiLoaderConfig),
     NgxUiLoaderHttpModule.forRoot({ showForeground: true,}),
     NgxUiLoaderRouterModule.forRoot({ showForeground: true, }),
-   
+    TranslateModule.forRoot({
+      loader: {
+          provide: TranslateLoader,
+          useFactory: HttpLoaderFactory,
+          deps: [HttpBackend],
+      }
+  })
     
   
   ],
